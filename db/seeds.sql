@@ -1,4 +1,4 @@
-INSERT INTO burgers (name)
+INSERT INTO burgers (burger_name)
 VALUES 
 ("test 1"),
 ("test 2"),
