@@ -15,20 +15,20 @@ router.get("/", function(req, res) {
 });
 
 router.post("/api/burgers", function({ body }, res) {
-  burger.newBuger([
-    body.name
-  ], function(result) {
+  burger.create(
+    body.name,
+    function(result) {
     // Send back the ID of the new quote
     res.json({ id: result.insertId });
   });
 });
 
-router.put("/api/burgers/:id", function(req, res) {
-  const condition = "id = " + req.params.id;
+router.put("/api/burgers/:id", function({ params }, res) {
+  const condition = "id = " + params.id;
 
   console.log("condition", condition);
 
-  burger.eat(condition, function(result) {
+  burger.update(condition, function(result) {
     if (result.changedRows == 0) {
       // If no rows were changed, then the ID must not exist, so 404
       return res.status(404).end();
