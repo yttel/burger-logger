@@ -2,17 +2,17 @@
 
 <h2>Burgers You Want To Eat!</h2>
 
-<ul>
+<ol>
   {{#each burger}}
     {{#unless devoured}}
       {{> burgers/burger-block}}
     {{/unless}}
   {{/each}}
-</ul>
+</ol>
 
 <h2>Burgers You Have Eaten!</h2>
 
-<ul>
+<ol>
 
   {{#each burger}}
     {{#if devoured}}
@@ -20,7 +20,7 @@
     {{/if}}
   {{/each}}
 
-</ul>
+</ol>
 
 <h2>Add a Burger</h2>
 
