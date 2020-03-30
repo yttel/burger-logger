@@ -1,11 +1,11 @@
-<h1>Cats!</h1>
+<h1>Eat-da-Burger!</h1>
 
 <h2>Burgers You Want To Eat!</h2>
 
 <ul>
-  {{#each burgers}}
-    {{#if !devoured}}
-      {{> cats/cat-block sleep=true}}
+  {{#each burger}}
+    {{#unless devoured}}
+      {{> burgers/burger-block}}
     {{/unless}}
   {{/each}}
 </ul>
@@ -14,12 +14,12 @@
 
 <ul>
 
-  {{#each burgers}}
+  {{#each burger}}
     {{#if devoured}}
-      {{> cats/cat-block sleep=false}}
+      {{> burgers/burger-block}}
     {{/if}}
   {{/each}}
-  
+
 </ul>
 
 <h2>Add a Burger</h2>
