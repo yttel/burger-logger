@@ -56,7 +56,7 @@ const dal = {
     const queryString = 
       "UPDATE burgers " +
       "SET devoured = true "+
-      "WHERE ?";
+      "WHERE id = ?;";
 
     console.log(queryString);
     connection.query(
